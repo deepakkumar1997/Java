@@ -1,0 +1,13 @@
+>> How to compile?
+> First of all source code or .java file gets compiled and converted into byte code 
+  that is nothing but .class file;
+
+>> How to run?
+> Then this byte code will be executed by JVM(java virtual machine) which acts as a
+  interpreter between byte code and Operating System;
+  > So what happens when we run byte code or .class file then JVM interprets line by
+    line code and sends it to OS and while OS executes one line of code at that time
+    JVM interpreting or converting line by line code to machine understandable code;
+
+> In java, it is not possible to make a function which is not a member of any class;
+  as we can do in C++;

@@ -1,0 +1,15 @@
+> Outer class of java can be public or default, it can't be private or protected;
+  public class HelloWorld{
+    // correct
+  }
+  class HelloWorld{
+    // correct
+  }
+  private class HelloWorld{
+    // incorrect
+  }
+  protected class HelloWorld{
+    // incorrect
+  }
+
+> But an inner class can be public, private, protected, or default;
