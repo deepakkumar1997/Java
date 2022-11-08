@@ -1,0 +1,48 @@
+>> Java is nearly 100% OOP but not 100% as it have primitives;
+
+>> As we can create a primitive type variable and it is not an object but in OOPs
+   it must that all members should be represented as class and objects;
+
+>> As a solution to this problem, Java allows us to include the primitives in the 
+   family of objects by using what are called wrapper classes;
+
+> There is a wrapper class for every primitive data type in Java;
+
+>> Wrapper Classes:
+> This class encapsulates a single value for the primitive data type;
+> For instance the wrapper class for int is Integer, for float is Float, and so on;
+
+    Primitive type -> Wrapper Class 
+    boolean        -> Boolean 
+    byte           -> Byte
+    char           -> Character
+    short          -> Short 
+    int            -> Integer
+    long           -> Long
+    float          -> Float 
+    double         -> Double 
+
+>> Userful methods of wrapper class:
+> valueOf(): It is a static method;
+    > Returns object reference of relative wrapper class;
+Example:
+Integer num = Integer.valueOf("123");
+Double realNum = Double.valueOf("3.14");
+Integer num1 = Integer.valueOf("101101",2);// will return decimal equivalent to this 
+// binary num;
+
+> parse???()
+    > Static method 
+    > ??? can be replaced by any primitive type;
+    > It returns ??? type value;
+Example:
+int num = Integer.parseInt("123");
+double realNum = Double.parseDouble("3.141");
+
+> ???Value():
+    > Instance method of wrapper class;
+    > ??? can be replaced by any primitive type;
+    > Returns corresponding primitive type;
+Example:
+Integer num = Integer.valueOf("122");
+int num1 = num.intValue(); // so it returns primitive type value from an refernce type value;
