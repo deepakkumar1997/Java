@@ -13,3 +13,7 @@
   }
 
 > But an inner class can be public, private, protected, or default;
+
+>> We can have only one pubic class in a single java file;
+>> Name of the file should be same as the name of public class;
+>> In absence of public class, any class name can be given to the file name;
