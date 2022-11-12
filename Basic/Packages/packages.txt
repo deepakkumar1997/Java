@@ -1,0 +1,20 @@
+>> Packages are nothing more than the way we organize files into different directories according to their 
+   functionality, usability as well as category they should belong to;
+
+>> FIles in one directory(or package) would have different functionality from those of another directory;
+
+Example:
+>> Files in java.io package do something related to I/O, but files in java.net package give us the way to deal
+   with the Network;
+
+>> What does Packages solve?
+> Packaging also help us to avoid class name collision when we use the same class name as that of others;
+> The benefits of using package reflect the ease of maintenance, organization, and increase collaboration 
+  among developers;
+
+>> How to run java programs which contains packages:
+> Compile with command:
+$ javac -d . javaFileName.java 
+// Here -d says to create a directory and . says create in current directory;
+> And run with packageName and dot operator like:
+$ java packageName.JavaFileName 
