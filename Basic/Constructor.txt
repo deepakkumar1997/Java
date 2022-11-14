@@ -1,0 +1,36 @@
+**************************************** CONSTRUCTOR *******************************************
+> Constructor is a member function of a class;
+> The name of constructor is same as the name of the class;
+> Constructor has no return type;
+
+> Any access modifiers can be used before a constructor();
+
+Example:
+
+public class Box{
+    private int l,b,h;
+    // Non-parameterized constructor
+    public Box(){
+        l=10;
+        b=8;
+        h=4;
+    }
+    // Parameterized constructor
+    public Box(int l, int b, int h){ // and this is constructor overloading 
+        this.l = l;
+        this.b = b;
+        this.h = h;
+    }
+    public static void main(String []args){
+        Box b1 = new Box(); // First constructor i.e. Non-param constructor will be automatically called;
+        Box b2 = new Box(20,12,5);// Second one i.e. Parameterized constructor will be automatically called;
+
+    }
+}
+
+>> A constructor is a special method that is used to initialize a newly created object and is called implicitly,
+   just after the memory is allocated for the object;
+>> It is not mandatory for the coder to write a constructor for the class;
+>> When there is no constructor defined in the class by programmer, compiler implicitly provide a default 
+   constructor for the class;
+>> Constructor can be parameterized and it can be overloaded;
