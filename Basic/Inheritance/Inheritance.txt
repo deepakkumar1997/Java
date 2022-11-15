@@ -1,0 +1,28 @@
+******************************** Inheritance *********************************
+> It is a mechanism in which one object acquires all the properties and behaviours of a parent object;
+
+> Syntax:
+class SubClass extends SuperClass
+{
+
+}
+> extends is a keyword
+> Base class means Super Class;
+> Derived class means Sub Class;
+
+>> Remember:
+> In the Java programming language, each class is allowed to have one direct SuperClass, and each SuperClass has
+  the potential for an unlimited number of subclasses;
+  > That means in java a class can't have more than one SuperClass but unlimited subclasses;
+  > THat means in java multiple inheritance is not supported; Muliple inheritance means multiple parentes/SuperClass;
+
+> Private members of the SuperClass are not accessible by the subclass and can only be indirectly accessed;
+    > That means private members of SuperClass is only available in subclass but not accessible;
+    > To know more about availability vs accesssibility; google it;
+
+> Members that have default accessibility in the superclass are also not accessible by subclass in other package;
+
+>> Java supports:
+    > Single Inheritance e.g. A -> B 
+    > Multi-level Inheritance e.g. A->B->C 
+    > Hierarchical Inheritance e.g. A->B, A->C 
