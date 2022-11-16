@@ -1,0 +1,57 @@
+************************************* Initialization Block ***************************************
+> There are two types of initialization blocks:
+    > Instance Initialization Block
+    > Static Initialization Block
+
+> We know that in java there is two type of member variable and member methods are there:
+    > Instance members (belong to a object)
+    > Static members  (belog to whole class)
+
+>> Instance Initialization Block:
+example:
+public class Test{
+    private int x;
+    {
+        System.out.println("Initialization Block: X = "+x);
+        x = 5;
+    }// This block is instance initialization block; and it runs right before constructor runs;
+    public Test(){
+        System.out.println("Constructor: X = "+x);
+    }
+    public static void main(String []args){
+        Test t1 = new Test();// output: Initialization Block: X = 0 , Constructor: X = 5
+        Test t2 = new Test();// output: Initialization Block: X = 0 , Constructor: X = 5
+    }
+}
+
+>> An instance initializer or initialization block declared in a class is executed when an instance of the class
+   is created;
+>> return keyword cannot be used in initialization block;
+>> Instance initializers are permitted to refer to the current object via the keyword this and to use the 
+   keyword super;
+
+>> Static Initialization Block:
+example:
+public class Test{
+    private static int k;
+    static{
+        System.out.println("Static Initialization Block: k="+k);
+        k = 10;
+    }// This is static initialization block; and it can only access static member of a class;
+    public static void main(String []args){
+        new Test();
+        /* How static initialization block executes?
+            > When you create an object of class;
+            > When you explicitly calls a static member using class name;
+        > And it executes only once in a program; making another object does not run static initialization block 
+          twice it runs only once in a life of a program;
+        */
+    }
+}
+
+>> A static initializer declared in a class is executed when program executes(the class is initialized):doubtful;
+    > A class gets initialized when you create an object of that class first time or when you call a static 
+      member using class name;
+>> Static initializers may be used to initialize the class variables(static var) of the class;;
+>> return keyword cannot be used in static initialization block;
+>> this or super can not be used in static block;
