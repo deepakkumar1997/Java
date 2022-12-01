@@ -1,0 +1,96 @@
+>> final is keyword in java which can be used:
+    > final instance variable
+    > final static variable 
+    > final local variable
+    > final class
+    > final methods
+
+>> final instance variable:
+
+> A java variable can be declared using the keyword final; Then the final variable can be assigned only once;
+
+> A variable that is declared as final and not initialized is called a blank final variable; A blank final 
+  variable forces either the constructors to initialize it or initialization block to do this job;
+
+Example:
+public class Example{
+    private int x; // instance member variable
+    // Declaration of final variable;
+    private final int y; // final instance member variable
+    // Initialize it by a constructor;
+    Example(int y){
+        this.y = y;
+    }
+    // Declare a final variable and initialize it using initializer block 
+    private final int a;
+    {
+        a = 20;
+    }// A initializer block executes right before a constructor when an object is created;
+    // Declaration and initialization of a final variable directly
+    private final int b = 10;
+}
+
+>> final static variable:
+
+> Static member variable when qualified with final keyword, it becomes blank until initialized;
+> FInal static variable can be initialized during declaration or within the static block;
+> Local variable can't be static in java;
+Example:
+class StaticFinal{
+    private static int x; // static member variable
+    private final static int y; // blank final static member variable
+    // Direct initialization
+    private final static int a = 10;
+    // Declaration and then initialize it with static inititalization 
+    private final static int b;
+    static{
+        b = 100;
+    }
+
+    public static void main(String[] args){
+        StaticFinal sf = new StaticFinal();
+    }
+}
+
+>> final local variable:
+> Local variable that are final must be initialized before it's use, but you should remember this rule is 
+   applicable to non final local variable too;
+> Once they are initialized, can not be altered;
+> Bydefault local variables are blank if it is not initialized;
+
+Example:
+class FinalLocalVariable{
+    public void fun(){
+        int x;
+        // x = x+1; // It will give error as x is blank and I'm trying to add 1 to the blank that is invelid in java 
+        // So for the solution you need to initialize it first then use it; like:
+        x = 0;
+        x = x+1; // x = 1;
+
+        // Declaration and initialization of final local variable;
+        final int y; // final local variable( blank )
+        y = 10;
+        final int k = 20;
+    }
+}
+
+>> final class:
+> Java classes declared as final cannot be extended. Restricting inheritance;
+Example:
+final class Dummy{
+
+}// This method can't be extended or inherited;
+
+>> final methods:
+> Methods declared as final cannot be overridden;
+Example:
+class A {
+    final void fun(){
+
+    }
+}
+class B extends A{
+    void fun(){
+        // It will give an error as it is trying to overload a final method 
+    }
+}
