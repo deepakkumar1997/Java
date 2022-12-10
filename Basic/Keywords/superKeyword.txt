@@ -1,0 +1,38 @@
+ **************************** super keyword *****************************
+ > In inheritance, subclass object when call an instance member function of subclss only, function contains 
+   implicit reference variables 'this' and 'super' both referring to the current object(Object of subclss);
+   > The only difference in 'this' and 'super' is:
+    > 'this' reference variable is of subclass type;
+    > 'super' reference variable is of superclass type;
+
+>> Use of super keyword:
+   > If your method overrides one of its superclass's method, you can invoke the overriden method(superclass
+    version) through the use of the keyword super;
+   > It avoids name conflict between member variables of superclass and subclass;
+
+Example:
+class A {
+  int z;
+  public void f1(){
+
+  }
+}
+class B extends A{
+  int z;
+  public void f1(){
+    super.f1(); // It will call parent class method f1()
+  }
+  public void f2(){
+    int z;
+    z = 1;
+    this.z = 2;// this refers current class member variable 'z';
+    super.z = 3; // this refers parent class member variable 'z';
+  }
+}
+class Example{
+  public static void main(String []args){
+    B obj = new B();
+    obj.f1();
+    obj.f2();
+  }
+}

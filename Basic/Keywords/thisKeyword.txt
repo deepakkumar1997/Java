@@ -1,0 +1,36 @@
+*************************** 'this' is a reference variable *************************************
+
+> "this" is a predefined instance variable to hold current object reference;
+
+> The 'this' object reference is a local variable in instance member methods referring the caller object;
+
+> 'this' keyword is used as a reference to the current object which is an instance of the current class;
+
+> The 'this' reference to the current object is useful in situations where a local variable hides, or shadows,
+  a field with the same name;
+
+> If a method needs to pass the current object to another method, it can do so using the this reference;
+
+> Note that the this reference cannot be used in a static context, as static code is not executed in the
+  context of any object;
+
+Example:
+class Box{
+    private int l,b,h;
+    public void setDimension(int l, int b, int h){// intstance member method 
+        this.l = l;
+        this.b = b;
+        this.h = h;
+    }
+    public void sendBox(){
+        GiftTaker gf = new GiftTaker();
+        gf.receiveGift(this);
+    }
+}
+public class Main{
+    public static void main(String[] args){ // static member method 
+        Box b1 = new Box();
+        b1.setDimension(2,4,6);
+        b1.sendBox(); // another use of this 
+    }
+}
