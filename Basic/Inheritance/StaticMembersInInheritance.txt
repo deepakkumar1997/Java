@@ -1,0 +1,72 @@
+>> Static member functions:
+> A class "Demo" inherits from its direct superclass all concrete methods m (both static and instance) of 
+  the superclass;
+
+> No method declared in "Demo" has same signature;
+
+Example:
+class Parent{
+    public static void f1(){
+        System.out.println("Parent");
+    }
+}
+class Child extends Parent{
+
+}
+public class Example{
+    public static void main(String []args){
+        Child.f1();
+    }
+}
+
+>> Method Hiding:
+> If subclass has a method m with the same signature as of the method present in the superclass, then method m 
+  hides the method of superclass;
+
+  Example:
+  class Parent{
+    public static void f1(){
+        System.out.println("Parent");
+    }
+  }
+  class Child extends Parent{
+    public static void f1(){
+        System.out.println("Child"); // This is called method hiding as method is static in both sub and super class 
+    }
+  }
+  public class Example{
+      public static void main(String []args){
+          Child.f1();
+      }
+  }
+
+Important:
+Method Hiding vs Method Override:
+> So when a non-static member of parent class is written in child with same signatue then it is method overriding;
+> But if a static member of parent class is written in child class with same signature then it is method hiding;
+> Example of method hiding is above;
+
+Remember:
+> It is a compile-time error if a static method hides an instance method;
+> It is a compile-time error if an instance method overrides a static method;
+
+>> Static member variables:
+   > Static member variable do not inherit;
+   > Static member variable can't be inherited but we can hide an static member variable using static block and
+     other methods;
+
+Example:
+class Parent{
+    static int y=4;
+}
+class Child extends Parent{
+    static{
+        y = 5;
+    }
+}
+public class Example{
+    public satic void main(Stirng []args){
+        System.out.println("y = "+Child.y); // y = 4; because here "Child" class will be replaced by "Parent"
+        // by compiler to print y = 5; first we have to use class Child so that static block will be executed then we've y = 5;
+    }
+}
