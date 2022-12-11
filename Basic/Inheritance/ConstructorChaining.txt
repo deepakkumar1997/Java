@@ -1,0 +1,31 @@
+*********************************** Constructor Chaining ****************************************
+
+> Constructor can call other constructors of the same class or superclass;
+> Constructor call from a constructor must be the first step;(call should appear in the first line)
+> Such series of invocation of constructors is known as constructor chaining;
+
+Example:
+class A{
+    public A(){
+        System.out.println("A");
+    }
+}
+class B extends A{
+    public B(){
+        this("Deepak");
+        System.out.println("Class B: Default Constructor");
+    }
+    public B(String name){
+        // By default super() method will be called here which will call parents default constructor;
+        System.out.println("Class B: Parametrized constructor: "+name);
+    }
+}
+class ConstructorChaining{
+    public static void main(String []args){
+        B obj = new B();
+    }
+}
+Important
+>> super() or this():
+   > First line of constructor is either super() or this()(by default super());
+   > Constructor never contains super() and this() both;

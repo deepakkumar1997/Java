@@ -1,0 +1,39 @@
+************************************ Constructors in inheritance *****************************************
+
+> Constructors are not inherited by subclass;
+
+> What happens when object of subclass created?
+> What is the role of constructor?
+
+class A{
+    int a;
+    public A(){
+        System.out.println("A");
+    }
+}
+class B extends A{
+    int b;
+    public B(){
+        System.out.println("B");
+    }
+}
+class Example{
+    public static void main(String []args){
+        B obj = new B();
+    }
+}
+
+> Sub class's constructor invokes constructor of super class;
+> Explicit call to the super class constructor from sub class's constructor can be made using super();
+> You can write a subclass constructor that invokes the constructor of the superclass, either implicitly or by 
+  using keyword super(explicitly);
+
+> We must use super() to call parent class constructor if in parent class there is no default constructor;
+
+>> Scenarios:
+> Implicit Constructorsin superclass and subclass;
+> Implicit constructor in subclass and explicit constructor in superclass;
+> Implicit constructor in superclass and explicit constructor in superclass;
+> Explicit constructor in subclass and superclass;
+
+> Subclss constructor may take arguments for its use as well as for the constructor of superclass;
