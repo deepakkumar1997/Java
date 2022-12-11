@@ -1,0 +1,26 @@
+*********************************** Abstract Methods *****************************************
+
+> An abstract class can include methods that contain no implementation. These are called abstract methods. The
+  abstract method declaration must then end with a semicolon rather than a block;
+
+> If a class has any abstract methods, whether declared or inherited, the entire class must be declared abstract;
+> If an abstract method is overriden in subclass then no need to declare subclass as abstract;
+
+Example:
+
+abstract class Person{
+    abstract void show();
+}
+class Student extedns Person{
+    // If you're not overriding parent's abstract method then you've to make subclass as abstract
+    // But if you're overriding then no need
+    void show(){
+        System.out.println("Deepak");
+    }
+}
+class AbstractExample{
+    public static void main(String []args){
+        Student s = new Student();
+        s.show();
+    }
+}

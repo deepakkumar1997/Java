@@ -1,0 +1,29 @@
+**************************************** Abstract Class *****************************************
+
+> An abstract class cannot be instantiated;
+> Abstract classes are declared with the abstract keyword;
+
+Example:
+
+abstract class Person{
+    private String name;
+    private int age;
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+}
+class AbstractExample{
+    public static void main(String []args){
+        Person p = new Person(); // This will throw an error as abstract class can't be instantiated;
+    }
+}
+
+> Java Abstract classes are used to declare common characteristics of subclass;
+> It can only be used as a superclass for other classes that extend the abstract class;
+> Like any other class, an abstract class can contain fields that descirbe the characteristics and methods that
+  descirbe the actions that a class can perform;
+
+> You can not create object of abstract class but you can create reference variable of abstract class;
