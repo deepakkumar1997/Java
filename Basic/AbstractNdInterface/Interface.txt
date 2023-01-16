@@ -1,0 +1,83 @@
+************************************** Interface **************************************
+
+> Interface definition begins with a keyword "interface";
+
+Syntax:
+interface SomeNameable{
+
+}
+
+> Interface just specify the method declaration (implicitly public and abstract) and can only contain fields
+  (which are implicitly public static final);
+> In interface by default all members are public;
+> You can't change access modifier to private and protected in an interface and it is by default public;
+
+Example:
+interface SomeName{
+    int variable; // It is by default 'public static final' int variable
+    void someFuntion(); // It is by default 'public abstract' void someFuntion()
+}
+
+
+> An interface like that of an abstract class cannot be instantiated;
+> Interface do not have constructors;
+> But abstract class can have constructors;
+
+> So why abstract class can have constructors and interface can't have?
+> Because interface's fields are public static final by default so we don't need objects to initialize them as 
+  with class name we can access those variable from an interface but in abstract class a field can be non-static
+  so we need constructors to initialize them that's why an abstract class can have constructors but an interface
+  can't have;
+
+> If a class that implements an interface does not define all methods of the interface, then it must be declared
+  abstract and the method definitions should be provided by the subclass that extends the abstract class;
+
+
+>> Extending and implementing:
+
+> Multiple extension is allowed when extending interfaces i.e. one interface can extend none, one or more 
+  interfaces;
+e.g.:
+interface i1{
+
+}
+interface i2{
+  void f1();
+}
+interface i3 extends i1, i2{
+  void f2();
+}
+class c1{
+
+}
+class c2 extends c1 implements i1, i2 {
+  void f1(){
+    ...
+  }
+  void f2(){
+    ...
+  }
+  void f3(){
+    ...
+  }
+}
+
+>> Object reference:
+
+> You can not create object of any interface but creation of object reference is possible;\
+> Object reference of interface can refer to any its subclass type;
+
+Example:
+public class Main{
+  public static void main(String[] args){
+    c2 o1 = new c2();
+    o1.f1();
+    o1.f2();
+    o1.f3();
+
+    i1 obj = new c2();
+    obj.f1(); 
+    obj.f2(); // error as here I've used reference variable of interface i1 
+    obj.f3(); // error  
+  }
+}
