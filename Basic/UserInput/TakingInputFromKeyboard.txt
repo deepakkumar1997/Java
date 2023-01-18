@@ -1,0 +1,36 @@
+> We can read java input from System.in using Scanner class;
+> Scanner is final class, that can not be extended;
+> Scanner class is a part of java.util.package;
+
+Example:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        // Here System.in represents or telling scanner that data is coming from keyboard buffer;
+        System.out.println("Enter a number: ");
+        int num = scan.nextInt();
+        System.out.println("Square of "+num+" is "+(num*num));
+    }
+}
+
+> System.in is a reference variable which referes to that System which is connected to the keyboard;
+> So from keyboard input comes to an intermediate loacation which we can call it buffer and from buffer the 
+  Scanner class takes the data and then it is parsed;
+
+>> Useful methods for taking input:
+
+> next() // for taking one word input Here space works as a delimeter
+> nextLine() // for taking Multiple word input(with whitespace)
+> nextBoolean() // for taking boolean input 
+> nextByte()
+> nextDouble()
+> nextFloat()
+> nextInt()
+> nextLong()
+> nextShort()
+
+>> Scanner Class:
+
+> A Scanner breaks its input into tokens using a delimeter pattern, which by default matches whitespace;
+> The resulting tokens may then be converted into values of different types using the various next methods;

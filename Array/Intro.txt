@@ -1,0 +1,44 @@
+************************************* Array in Java ***********************************************
+
+> How to make array in java:
+
+int arr[]; // Here arr[] is a reference variable which will point to an array;
+
+> There is only one way to make array in java:
+Example:
+int[] arr = new int[5];
+int arr[] = new int[5]; 
+
+> Declaring and initializing array in different way:
+
+> int arr[] = new int[]{1,2,3,4,5};
+> int arr[] = new int[2]{1,2,3,4,5}; // error as does not 
+> int arr[] = new int[5]{1,2,3,4,5}; // error: you can not mention size and values together
+> int arr[] = {1,2,3,4,5};
+
+>> Array is not blank: this means that by default each element of java array contains zero;
+
+> int[] arr = new int[3];
+> System.out.println("arr[0]="+arr[0]);
+
+Example:
+public class ArrayExample{
+    public static void main(String[] args){
+        int arr[]; // Here 'int arr[]' is a local reference variable and we know that if a local variable is not
+        // initialized then by default it contains 'blank';
+        arr[0] = 25; // and now we are trying to initialize a value to the array which doesn't have any reference
+        // so it will throw an error "variable arr might not be initialized";
+        arr[1] = 200;
+    }
+}
+> For solving this issue we can initialize arr local reference variable;
+
+public class ArrayExample{
+    public static void main(String[] args){
+        int[] arr;
+        arr = new int[5];
+        arr[0] = 25;
+        arr[1] = 50;
+        System.out.println("Then "+arr[0]+" Now "+arr[1]);
+    }
+}
