@@ -1,0 +1,77 @@
+> Reference variable to 2D array:
+    > int arr[][]; // This is a reference variable for 2d array 
+    > int[][] arr; // same and more professional
+
+> Creating 2d arrays:
+    > int[][] arr = new int[3][5];
+    > This array represents 3 columns and 5 rows;
+    > Here arr will be holding address of whole block inside that there will be 3 block which will be holding 
+      the address of 3 1d array with 5 elements;
+
+> But 
+    > int[][] arr = new int[][]; // error (as we know an empty memory can't have any address)
+    > int[][] arr = new int[][5]; // error (as here child sub-block is created without creating reference for sub-block which will hold the reference for sub-child block)
+    > int[][] arr = new int[3][]; // correct (as of now main-block reference and then sub-block reference is created and child sub-block reference is yet to be created and it can be created afterwards)
+
+    > and this above array, there is reference available for arr but for arr[0]'s, arr[1]'s, and arr[2]'s 
+      reference is not there so it will be pointing to 'null';
+
+> Declaring and initializing a 2d array at same time:
+    > int[][] arr = new int[][] {{1,2},{2,3},{3,4}};
+
+> What will the output of below code snippets:
+1 >
+public class Example{
+    public static void main(String[] args){
+        int[][] arr = new int[4][];
+        System.out.println("arr[0][0] "+arr[0][0]);
+    }
+}
+
+> Output: It will threw an error as we know that child sub-block is not declared so it does not exist so how 
+          someone can be called if he doesn't exist;
+2 >
+public class Example{
+    public static void main(String[] args){
+        int[][] arr = new int[4][];
+        System.out.println("arr[0] "+arr[0]);
+    }
+}
+
+> Output: null (as currently a[0] to a[2] is not pointing anything that means it containing 'null');
+
+3 >
+public class Example{
+    public static void main(String[] args){
+        int[][] arr = new int[4][];
+        System.out.println("arr.length "+arr.length);
+    }
+}
+
+> Output: 4 (the size of main array sub-block is 4)
+
+4 >
+public class Example{
+    public static void main(String[] args){
+        int[][] arr = new int[4][];
+        System.out.println("arr[0].length "+arr[0].length);
+    }
+}
+
+> Output: error (as size of the child sub-block is not defined and currently sub-block doen't point anywhere that means it is containing null so output will be error as null does have any length)
+> It will throw error "null pointer exception" as we're trying to print length of null;
+
+
+>> Distinct length feature in 2d array:
+
+> In java it is possible to declare a 2d array with different length of each array;
+Example:
+
+public class Example{
+    public static void main(String[] args){
+        int[][] arr = new int[4][];
+        a[0] = new int[5];
+        a[1] = new int[3];
+        System.out.println("Length = "+a[1].length); // output: 3
+    }
+}
