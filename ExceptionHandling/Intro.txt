@@ -1,0 +1,58 @@
+************************** Introduction to Exception Handling in JAVA *********************************
+
+> What is an Exception?
+> Exceptions in java are any abnormal, unexpected events or extraordinary conditions that may occur at runtime.
+
+> There are 4 ways of handling exceptions in java:
+    > Default throw and default catch
+    > Default throw and our catch 
+    > Our throw and default catch
+    > Our throw and our catch
+
+> Exception Handling: Java exception handling is used to handle error conditions in a program systematically
+  by taking the necessary action;
+
+> Throwable is the superclass of every exception;
+
+>> throw and catch:
+> Java exceptions are raised with the throw keyword and handled within a catch block;
+
+> If we try to get the length of a string that has no reference that means it has null then it will throw 
+  NullPointerException;
+
+>> Throwable:
+
+> The Throwable class provides a string variable that can be set by the subclasses to provide a detailed message
+  that provides more information about the exception that occurred;
+
+> All classes of Throwable define a one-parameter constructor that takes a string as the detail message;
+
+> The class Throwable provides getMessage() function to retrieve an exception;
+
+
+*************************** Unchecked Exception Handling in JAVA ***********************************
+
+> In Java, exceptions are of two types:
+> The class Exception represents exceptions that a program faces due to abnormal or special conditions during 
+  execution;
+> Exceptions can be of 2 types: Checked(Compile time Exceptions)/ Unchecked(Run time Exceptions);
+
+>> Unchecked Exceptions:
+> Unchecked exceptions are RuntimeException and any of its subclass;
+> ArrayIndexOutOfBounds, NullPointerException and so on are all subclasses of the java.lang.RuntimeException
+  class, which is a subclass of the Exception class;
+
+>> Default throw and our catch: 
+Syntax:
+
+try {
+    <code> // code which is suspected that can throw an exception
+} catch (<exception type> <parameter>){
+    ...
+}
+finally{
+    ...
+}
+
+> You must write either catch block or finally block after the 'try' block otherwise it will be considered
+  an error;
