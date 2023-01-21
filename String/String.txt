@@ -1,0 +1,109 @@
+> String Class: A java.lang.String class is final which implies no class can extend it;
+> If a class is final then it can not be extended or inherited;
+
+> String is an immutable class:
+> Java String Class is immutable, i.e. Strings in java, once created and initialized, cannot be changed on the 
+  same reference;
+
+> Creating String Object:
+> A simple string can be created using a string literal enclosed inside double quotes as shown below:
+> String str1 = "My name is Deepak";
+
+>> Important Point:
+> If two or more strings have the same set of characters in the same sequence then they share the same reference
+  in memory;
+  e.g. 
+        String str1 = "My name is Deepak";
+        String str2 = "My name is Deepak";
+        String str3 = "My name "+"is Deepak";
+    > Not only the first two will share the same reference but the third also will share the same reference as 
+      after concatenating the string it will have the same sequence of characters;
+
+> All the string references str1, str2 and str3 denote the same string object;
+
+Another Example:
+
+String str4 = "Deepak";
+String str5 = "My name is"+str4;
+String str6 = "My name is Deepak";
+
+> Here, str4 will have a new or another reference as it's a new string;
+> But str5 and str6 will still share the same reference as both have same string(or same sequence of characters);
+> This sharing of memory by strings will only apply if these are not made by the use of the 'new' keyword;
+
+
+>> Creating strings with 'new' keyword:
+e.g. 
+String str1 = new String("My name is Deepak");
+String str2 = new String("My name is Deepak");
+> These strings are using the same sequence of characters but still these will not share the same reference as 
+  these strings are made by using the 'new' keyword;
+> So keep in mind that if we create an object with the new keyword then a new memory will be created and the 
+  reference of that memory will be assigned to the respective reference variable;
+
+>> Concatenation Operator:
+> The java.lang.String class differs from other classes, one difference being that the string objects can be 
+  used with the += and + operators for concatenation;
+e.g.
+> Guess the output:
+
+public class StringExample{
+    public static void main(Stirng[] args){
+        String str1 = "Vulnerability"; 
+        String str2 = "Vulnerability";
+        String str3 = new String("Vulnerability");
+
+        System.out.println("Result 1: "+(str1==str2)); // true
+        
+        // The output is true because it is comparing both references of str1 & str2 and both references are pointing to the same memory location
+        
+        System.out.println("Result 2: "+str1.equals(s2)); // true 
+        
+        // equals() is a method that is present in every class because there is an object class that is the parent 
+        // of every class in java and this object class has equals() method which is used to compare two objects values;
+        
+        System.out.println("Result 3: "+(str1==str3)); // false
+
+        // Here two reference variables are getting compared and both have a different reference so that's why false
+
+        System.out.println("Result 4: "+str1.equals(str3)); // true
+
+        // true because equals() methods compare values of objects  and both values are equal so that's why true;
+    }
+} 
+
+> In java, by default every class inherits the Object class and due to this some methods like equals() get 
+  inherited in our new class which we can use directly;
+
+
+>> String methods in java:
+
+> Case conversion:
+    > toUpperCase(); // return strings in uppercase 
+    > toLowerCase(); // return strings in lowercase 
+e.g. 
+    String s1 = new String("deepak Pandey");
+    System.out.println(s1);// deepak Pandey 
+    s1.toUpperCase(); 
+    System.out.println(s1); // deepak Pandey (as we've not stored returned string by toUpperCase() and printed original s1);
+    String strUpper = s1.toUpperCase();
+    System.out.println(strUpper);
+
+>> indexOf() & lastIndexOf():
+    > indexOf(int ch); // returns the index of a character in a string
+    > indexOf(int ch, int fromIndex); // returns the index of a character but starts searching from a given index
+    > indexOf(String str); // returns first index of matching sub-string 
+    > indexOf(String str, int fromIndex);
+    > lastIndexOf(int ch); // starts searching from last index 
+    > lastIndexOf(int ch, int fromIndex); // Will take index as normal but searches in reverse order
+    > lastIndexOf(String str);
+    > lastIndexOf(String str, int fromIndex);
+
+>> Comparing Strings:
+    > str1.equals(String someString); // returns a boolean value 
+    > str1.equalsIgnoreCase(String anotherString); // String case will be ignored while comparing, returns a boolean value 
+    > str1.compareTo(String someAnotherString); // returns the Unicode difference of the first corresponding mismatch of character
+
+>> Substring:
+    > substring(int beginIndex); // returns a string, starting from beginIndex till last 
+    > substring(int beginIndex, int endIndex); // returns a string, starting from beginIndex till endIndex
