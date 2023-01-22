@@ -1,0 +1,38 @@
+>> Collection and Collections:
+> Collection is an interface;
+> Collections is a class
+    > Collections class provides several utility methods like sort();
+
+>> Methods of Collection:
+
+    > boolean add(Object o);
+      > Add an object to the collection
+    > boolean addAll(Collection c);
+      > Add all the objects of the specified collection
+    > boolean remove(Object o);
+      > Removes a single instance of the specified element from this collection
+    > boolean removeAll(Collection c);
+      > Removes all of this collection's elements that are also contained in the specified collection;
+
+    > boolean retainAll(Collection c);
+      > Retains only the elements in this collection that are contained in the specified collection;
+    > int size();
+      > Returns the number of elements in this collection;
+    > boolean contains(Object o);
+      > Returns true if this collection contains the specified object;
+
+    > void clear();
+      > Removes all of the elements from this collection;
+    > boolean isEmpty();
+      > Returns true if this collection contains no elements;
+    > Iterator<E> iterator();
+      > Returns an iterator over the elements in this collection;
+
+>> Methods of List interface:
+
+    > void add(int index, E element);
+      > Inserts the specified element at the specified position in this list(elements may shift);
+    > E set(int index, E element);
+      > Replaces the element at the specified position in this list with the specified element;
+    > E get(int index);
+      > Returns the element at the specified position in this list.

@@ -1,0 +1,21 @@
+>> ArrayList:
+
+    > ArrayList is defined using dynamic arrays;
+    > Therefore it is resizable means it can grow and shrink automatically;
+    > Duplicates are allowed;
+    > Order of elements is preserved;
+    > Null insertion is possible;
+    > Except TreeSet and TreeMap Heterogeneous objects are allowed;
+
+>> ArrayList: Constructors
+
+> ArrayList a = new ArrayList();
+  > Creates an empty ArrayList object with default initial capacity "10" if ArrayList reaches its max capacity
+    then a new ArrayList object will be created with:
+        > New capacity=(current capacity*3/2)+1
+
+> ArrayList a = new ArrayList(int initialCapacity);
+  > Creates an empty ArrayList object with the specified initial capacity;
+
+> ArrayList a = new ArrayList(Collection c);
+  > Creates an equivalent ArrayList object for the given Collection;

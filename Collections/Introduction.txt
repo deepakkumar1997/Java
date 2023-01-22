@@ -1,0 +1,84 @@
+>> Collection Framework:
+> The Collections Framework provides a well-designed set of interfaces and classes for storing and manipulating
+  groups of data as a single unit, a collection.
+
+>> Collection: The collection framework contains the following
+
+    > Interfaces: These are abstract data types that represent collections;
+    
+    > Implementations(classes): These are the concrete implementations of the collection interfaces;
+
+    > Algorithms:
+        > These are the methods that perform useful computations, such as searching and sorting, on objects
+          that implement collection interfaces;
+
+>> Collection or Arrays:
+> If the size is known Array is a better choice in terms of performance;
+> Collection provides flexibility in memory which increases the time complexity;
+
+>> Interfaces in collection framework:
+
+> Collection
+    > For a group of objects 
+
+> List
+    > Duplicates allowed
+    > Insertion order must be preserved
+    > ArrayList, LinkedList, Vector, and Stack are the implementation classes;
+
+> Collection is an interface;
+
+> List interface extends Collection interface;
+
+> Stack is a child class of Vector;
+
+> Set is a child interface of the Collection interface which means the Set interface extends the Collection interface;
+
+>> Set 
+    > A collection that cannot contain duplicate elements;
+    > Insertion order is not preserved;
+    > HashSet and LinkedHashSet are the classes implemented Set interface;
+
+> SortedSet: Child interface of Set interface
+    > cannot contain duplicate elements
+    > Some sorted order
+
+> NavigableSet
+    > Child interface of SortedSet 
+    > It defines several methods for navigation purposes
+    > TreeSet is an implementation class 
+
+> Queue:
+    > Child interface of Collection
+    > PriorityQueue, BlockingQueue, LinkedBlockingQueue, PriorityBlockingQueue
+
+> Map: A separate interface and not related to the Collection interface
+    > It is used to represent a group of objects as key-value pairs;
+    > Map is not a child interface of Collection;
+    > Key and values both are objects;
+    > Keys must be unique but values can repeat;
+    > HashMap, LinkedHashMap, WeakHashMap, IdentityHashMap, Hashtable, Properties
+
+> SortedMap:
+    > It is used to represent a group of objects as key-value pairs;
+    > Child interface of Map 
+    > Some sorting order 
+
+> NavigableMap:
+    > Child interface of SortedMap
+    > TreeMap is an implementation class 
+
+>> Sorting: 
+
+> Comparable: Interface for default sorting 
+> Comparator: Interface for customized sorting 
+
+>> Utility classes:
+
+> Collections 
+> Arrays 
+
+>> Collection and Collections:
+> Collection is an interface;
+> Collections is a class
+    > Collections class provides several utility methods like sort();
