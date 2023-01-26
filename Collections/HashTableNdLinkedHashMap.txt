@@ -1,0 +1,13 @@
+>> HashTable:
+
+> This is a thread-safe version of HashMap;
+> Unsorted and unordered;
+> HashTable is the data structure used;
+> HashTable doesn't allow null value unlike HashMap;
+
+>> LinkedHashMap:
+
+> Subclass of HashMap;
+> Insertion order is maintained;
+> Slower insertion and deletion;
+> Hybrid data structure is used(Doubly linked list and HashTable);

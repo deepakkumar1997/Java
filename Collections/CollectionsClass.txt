@@ -1,0 +1,9 @@
+******************************************* Collections ***********************************************
+
+> Collections class resides in util package;
+> This class consists exclusively of static methods that operate on or return collections;
+
+>> Methods of collections:
+
+> public static void sort(List list);
+> public static void sort(List list, Comparator c);

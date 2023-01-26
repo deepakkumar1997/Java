@@ -1,0 +1,34 @@
+**************************************************** Map *****************************************************
+
+> Map is not a child interface of the Collection framework;
+> Whenever we want to store a group of key-value pairs, we use Map;
+> Key and value both must be objects;
+> Values can repeat but keys not;
+> All map implementation classes should provide two "standard" constructors:
+    > a void(no-arg) constructor which creates an empty map, and 
+    > a constructor with a single argument of type Map, which creates a new Map with the same key-value mappings
+      as its argument;
+
+>> Map.Entry:
+    > A map entry(key-value pair)
+    > Inner interface of Map 
+    > Methods of entry
+        > public Object getKey(): is used to obtain key 
+        > public Object getValue(): is used to obtain value
+
+>> Useful methods of Map:
+
+    > public Object put(Object key, Object value)
+      > It is used to insert an entry in this map ;
+    > public void putAll(Map map)
+      > It is used to insert the specified map in this map;
+    > public Object remove(Object key)
+      > It is used to delete an entry for the specified key;
+    > public Object get(Object key)
+      > It is used to return the value for the specified key;
+    > public boolean containsKey()
+      > It is used to search the specified key from this map;
+    > public Set keySet()
+      > It returns the Set view containing all the keys;
+    > public set entrySet()
+      > It returns the Set view containing all the keys and values;

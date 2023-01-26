@@ -1,0 +1,36 @@
+> A HashMap contains values based on the key.
+> Hash table data structure is used;
+> It contains unique elements only;
+> It may have one null key and multiple null values;
+    > Next attempt to enter null as a key, it simply discards, without any error;
+
+>> Methods of HashMap:
+
+> public int size(): Returns the number of key-value mappings in this map.
+
+> public boolean isEmpty(): Returns true if this map contains no key-value mappings.
+
+> pubic V get(Object key): Returns the value to which the specified key is mapped, or null if this map contains 
+                           no mapping for the key.
+
+
+>> SortedMap:
+
+> Child interface of Map;
+> Whenever a group of key-value pairs needs to be stored in some sorted order, we use 
+  SortedMap;
+> Sorting logic applies on keys;
+
+>> NavigableMap:
+
+> It is a child interface of SortedMap;
+> Several utility methods it provides to navigate in SortedMap;
+
+>> TreeMap:
+
+> It implements NavigableMap(so SortedMap and Map);
+> Sorted order is maintained;
+> It is not thread-safe;
+> the map is sorted according to the natural ordering of its keys, or by 
+  > a Comparator provided at map creation time, depending on which constructor is used;
+> A Red-Black tree-based NavigableMap implementation;
