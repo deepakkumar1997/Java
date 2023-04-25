@@ -1,0 +1,50 @@
+> throws keyword is used to throw checked exception(which can be caught by the compiler) by default(Java);
+> or otherwise we can use try and catch to catch these checked exceptions;
+
+********** Compile time error in checked exception ************
+
+> Checked exception forces programmers to deal with the exception that may be thrown;
+> IOException, SQLException, IllegalThredStateException, etc are checked exceptions;
+> "checked" means they will be checked at compile time itself;
+
+>> throws:
+> A throws clause can be used in the method prototype;
+
+> Syntax:
+
+method() throws <ExceptionType1>, ..., <ExceptionTypeN>
+{
+
+}
+
+> Example: Avoid checked exception using throws keyword
+
+import java.io.*;
+public class Example
+{
+    public static void main(String[] args) throws IOException
+    { 
+        throw new IOException();
+    }
+}
+
+> Example: Handle checked exception using try and catch
+
+public class Example
+{
+    public static void main(String[] args)
+    {
+        try{
+            throw new IOException();
+        }
+        catch(IOException e){
+            System.out.println("Exception: "+e.getMessage());
+        }
+    }
+}
+
+> The throws keyword in Java programming language applies to a method to indicate that the method raises the 
+  particular type of exception while being processed.
+
+> The throws keyword in Java programming language takes arguments as a list of the objects of type 
+  java.lang.Throwables class;
