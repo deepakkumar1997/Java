@@ -4,6 +4,19 @@
 > String is an immutable class:
 > Java String Class is immutable, i.e. Strings in Java, once created and initialized, cannot be changed on the 
   same reference;
+  > The JVM internally uses a string pool on the heap or the JVM puts all the strings in a special memory area called
+    string pool.
+  > A string holds the same address forever in the memory so if you create another string then that will be residing in 
+    another memory location.
+    like String s1 = "Hello"; 
+         System.out.println(s1); // String@123 (address/reference of s1)
+
+         s1 = "World"; // then this s1 will point to another memory location as string has changed;
+         System.out.println(s1); // String@987
+
+         String s2 = "Hello"; // This will point to the same reference as s1 = "Hello" as didn't changed so the reference;
+         System.out.println(s2); // String@123, so this is immutability
+         > So you can see that when you create a string "any string" it returns a reference which is immutable;
 
 > Creating String Object:
 > A simple string can be created using a string literal enclosed inside double quotes as shown below:
