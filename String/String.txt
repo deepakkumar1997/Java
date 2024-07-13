@@ -1,8 +1,8 @@
-> String Class: A java.lang.String class is final which implies no class can extend it;
+> String Class: A java.lang.String class is a final class which implies no class can extend it;
 > If a class is final then it can not be extended or inherited;
 
 > String is an immutable class:
-> Java String Class is immutable, i.e. Strings in java, once created and initialized, cannot be changed on the 
+> Java String Class is immutable, i.e. Strings in Java, once created and initialized, cannot be changed on the 
   same reference;
 
 > Creating String Object:

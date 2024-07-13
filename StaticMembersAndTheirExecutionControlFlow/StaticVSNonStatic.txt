@@ -1,0 +1,5 @@
+***************** Static VS Non-static Context ************************
+> There are only two contexts in Java i.e. 
+    > Static Context -> Class level: This is for the entire class no matter how many objects of that class you create.
+      They will all share the same static context. Whether it is blocks, properties or methods and all the objects.
+    > Non-static Context -> Object level
