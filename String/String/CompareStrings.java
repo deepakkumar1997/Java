@@ -15,6 +15,15 @@ public class CompareStrings {
 
         System.out.println(str4 == str1); // will compare the reference of strings thus false bcz 'new' creates a new memory location(str4)
         System.out.println(str1.equals(str4)); // will compare the values thus true as values are same
+
+        User user1 = new User(1, "Deepak");
+        User user2 = new User(1, "Deepak");
+
+        System.out.println(user1 == user2); // false bcz reference is differrent as new keyword is used
+        System.out.println(user1.equals(user2));
+        // it will return false as here equals method is inherited from Object class and that equals() method do the same
+        // comparison as '==' but in case of String equals() method is overridden in String class and made to compare the
+        // value so if we want to compare values of an object then we have to create a custom method to do that.
     }
     
 }
